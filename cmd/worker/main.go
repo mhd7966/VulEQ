@@ -4,13 +4,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/abr-ooo/VulEQ/configs"
-	"github.com/abr-ooo/VulEQ/connections"
-	"github.com/abr-ooo/VulEQ/jobs"
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/services/sonarqube"
 	"github.com/getsentry/sentry-go"
 	"github.com/hibiken/asynq"
+	"github.com/mhd7966/VulEQ/configs"
+	"github.com/mhd7966/VulEQ/connections"
+	"github.com/mhd7966/VulEQ/jobs"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/services/sonarqube"
 	"github.com/sirupsen/logrus"
 )
 

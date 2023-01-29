@@ -3,9 +3,10 @@ package connections
 import (
 	"database/sql"
 	"fmt"
-	"github.com/abr-ooo/VulEQ/configs"
-	"github.com/abr-ooo/VulEQ/log"
+
 	_ "github.com/lib/pq"
+	"github.com/mhd7966/VulEQ/configs"
+	"github.com/mhd7966/VulEQ/log"
 	"github.com/sirupsen/logrus"
 )
 

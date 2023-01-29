@@ -1,11 +1,10 @@
 package routes
 
 import (
-	"github.com/abr-ooo/VulEQ/controllers"
 	"github.com/gofiber/fiber/v2"
+	"github.com/mhd7966/VulEQ/controllers"
 	log "github.com/sirupsen/logrus"
 )
-
 
 func SonarProjectRouter(app fiber.Router) {
 

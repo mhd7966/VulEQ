@@ -3,9 +3,9 @@ package log
 import (
 	"os"
 
-	"github.com/abr-ooo/VulEQ/configs"
 	"github.com/evalphobia/logrus_sentry"
 	"github.com/getsentry/raven-go"
+	"github.com/mhd7966/VulEQ/configs"
 	"github.com/sirupsen/logrus"
 )
 

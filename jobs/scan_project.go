@@ -8,14 +8,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/abr-ooo/VulEQ/configs"
-	"github.com/abr-ooo/VulEQ/models"
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/repositories"
-	"github.com/abr-ooo/VulEQ/services/git"
-	"github.com/abr-ooo/VulEQ/services/sonarqube"
 	"github.com/google/uuid"
 	"github.com/hibiken/asynq"
+	"github.com/mhd7966/VulEQ/configs"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/models"
+	"github.com/mhd7966/VulEQ/repositories"
+	"github.com/mhd7966/VulEQ/services/git"
+	"github.com/mhd7966/VulEQ/services/sonarqube"
 	"github.com/sirupsen/logrus"
 )
 

@@ -1,10 +1,9 @@
 package routes
 
 import (
-
+	gopkgs "github.com/abr-ooo/go-pkgs"
 	"github.com/gofiber/fiber/v2"
-	"github.com/abr-ooo/go-pkgs"
-	"github.com/abr-ooo/VulEQ/log"
+	"github.com/mhd7966/VulEQ/log"
 )
 
 func MainRouter(app fiber.Router) {
@@ -16,4 +15,3 @@ func MainRouter(app fiber.Router) {
 	log.Log.Info("All routes created successfully :)")
 
 }
-

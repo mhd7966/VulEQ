@@ -3,14 +3,14 @@ package controllers
 import (
 	"strconv"
 
-	"github.com/abr-ooo/VulEQ/connections"
-	"github.com/abr-ooo/VulEQ/jobs"
-	"github.com/abr-ooo/VulEQ/models"
-	"github.com/abr-ooo/VulEQ/repositories"
 	gopkgs "github.com/abr-ooo/go-pkgs"
 	"github.com/gofiber/fiber/v2"
+	"github.com/mhd7966/VulEQ/connections"
+	"github.com/mhd7966/VulEQ/jobs"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/models"
+	"github.com/mhd7966/VulEQ/repositories"
 	"github.com/sirupsen/logrus"
-	"github.com/abr-ooo/VulEQ/log"
 )
 
 // ScanProject godoc

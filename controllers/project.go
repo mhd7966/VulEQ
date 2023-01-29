@@ -4,13 +4,13 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/models"
-	"github.com/abr-ooo/VulEQ/repositories"
-	"github.com/abr-ooo/VulEQ/services/sonarqube"
 	gopkgs "github.com/abr-ooo/go-pkgs"
 	"github.com/form3tech-oss/jwt-go"
 	"github.com/gofiber/fiber/v2"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/models"
+	"github.com/mhd7966/VulEQ/repositories"
+	"github.com/mhd7966/VulEQ/services/sonarqube"
 	"github.com/sirupsen/logrus"
 )
 

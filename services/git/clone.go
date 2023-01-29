@@ -3,11 +3,11 @@ package git
 import (
 	"os"
 
-	"github.com/abr-ooo/VulEQ/models"
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/configs"
 	"github.com/go-git/go-git/v5"
 	"github.com/go-git/go-git/v5/plumbing"
+	"github.com/mhd7966/VulEQ/configs"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/models"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/src-d/go-git.v4/plumbing/transport/http"
 )

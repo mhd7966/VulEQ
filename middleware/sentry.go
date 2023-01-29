@@ -9,10 +9,10 @@ package middleware
 import (
 	"time"
 
-	"github.com/abr-ooo/VulEQ/configs"
 	sentryfiber "github.com/aldy505/sentry-fiber"
 	"github.com/getsentry/sentry-go"
 	"github.com/gofiber/fiber/v2"
+	"github.com/mhd7966/VulEQ/configs"
 )
 
 func InitApiSentry(app fiber.Router) {

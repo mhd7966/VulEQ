@@ -4,10 +4,10 @@ import (
 	"encoding/base64"
 	"errors"
 
-	"github.com/abr-ooo/VulEQ/models"
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/configs"
 	"github.com/imroc/req"
+	"github.com/mhd7966/VulEQ/configs"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/models"
 	"github.com/sirupsen/logrus"
 )
 
@@ -24,7 +24,7 @@ func Ping() error {
 	// }
 
 	url := "http://" + config.Host + "/api/system/ping"
-	r, err := req.Post(url, )
+	r, err := req.Post(url)
 	if err != nil {
 		log.Log.WithFields(logrus.Fields{
 			"URL":    url,

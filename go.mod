@@ -1,4 +1,4 @@
-module github.com/abr-ooo/VulEQ
+module github.com/mhd7966/VulEQ
 
 go 1.16
 

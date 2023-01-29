@@ -1,10 +1,9 @@
 package repositories
 
 import (
-
-	"github.com/abr-ooo/VulEQ/connections"
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/models"
+	"github.com/mhd7966/VulEQ/connections"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/models"
 	"github.com/sirupsen/logrus"
 )
 

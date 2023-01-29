@@ -5,11 +5,11 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/abr-ooo/VulEQ/connections"
-	"github.com/abr-ooo/VulEQ/repositories"
-	"github.com/abr-ooo/VulEQ/log"
-	"github.com/abr-ooo/VulEQ/services/sonarqube"
 	"github.com/hibiken/asynq"
+	"github.com/mhd7966/VulEQ/connections"
+	"github.com/mhd7966/VulEQ/log"
+	"github.com/mhd7966/VulEQ/repositories"
+	"github.com/mhd7966/VulEQ/services/sonarqube"
 	"github.com/sirupsen/logrus"
 )
 
