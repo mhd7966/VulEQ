@@ -1,4 +1,0 @@
-development:
-    dialect: postgres
-    datasource: host=localhost dbname=postgres user=admin password=admin sslmode=disable
-    dir: pkg/migrations
