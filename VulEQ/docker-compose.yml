@@ -1,0 +1,83 @@
+version: '2.4'
+
+x-common-variables: &common-variables
+  - TZ=Asia/Tehran
+  - DB_HOST=db
+  - DB_PORT=5432
+  - DB_NAME=postgres
+  - DB_USER=admin
+  - DB_PASS=admin
+  - SONAR_HOST=sonarqube:9000
+  - SONAR_USER=admin
+  - SONAR_PASS=admin:)
+  - Authorization=admin:admin:)
+  - SONAR_SCANNER_PATH=/opt/sonar-scanner/bin/sonar-scanner
+  - SONAR_TOKEN_PREFIX=token_
+  - SONAR_KEY_PREFIX=key_
+  - STORE_CLONE_PATH=/git_clone/
+  - REDIS_ADD=redis:6379
+  - LOG_LEVEL=debug
+  - LOG_OUTPUT_TYPE=stdout
+  - LOG_FILE_Add=/log.txt
+  - AUTH_HOST=https://api.abr.ooo/v0/user
+  - SENTRY_DSN=https://ec556f1137f34f5f88677de70367473f@sentry.abr.ooo/2
+  - SENTRY_LEVEL=error
+
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    pid: "host"
+    environment: *common-variables
+    depends_on:
+      - db
+      - redis
+      - sonarqube
+    ports:
+      - "3000:3000"
+
+  worker:
+    image: vuleq:worker
+    build:
+      context: .
+      args:
+        BUILD_PATH: ./cmd/worker
+    restart: always
+    environment: *common-variables
+    depends_on:
+      - db
+      - redis
+      - sonarqube
+
+  sonarqube:
+    image: sonarqube:9.0.1-community
+    depends_on:
+      - db
+    ports:
+      - "9000:9000"
+    volumes:
+      - ~/dockerv/sonar/data:/opt/sonarqube/data
+      - ~/dockerv/sonar/extensions:/opt/sonarqube/extensions
+      - ~/dockerv/sonar/logs:/opt/sonarqube/logs
+      - ~/dockerv/sonar/tmp:/opt/sonarqube/temp
+
+  db:
+    image: postgres:alpine3.14
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=postgres
+    volumes:
+      - ~/dockerv/postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine3.14
+    ports:
+      - "6379:6379"
+    volumes:
+      - ~/dockerv/redis:/data
